@@ -9,19 +9,23 @@ LINK = "https://www.linkedin.com/feed/"
 
 
 class PostLiker:
+
     def __init__(self):
+        print("Starting linkedin.....")
         chrom_option = webdriver.ChromeOptions()
         chrom_option.add_experimental_option("detach", True)
         self.driver = webdriver.Chrome(options=chrom_option)
         self.driver.get(LINK)
 
     def login(self):
+        print("I am logging in....")
         email_input = self.driver.find_element(By.NAME, value="session_key")
         email_input.send_keys(EMAIL)
         password_input = self.driver.find_element(By.NAME, value="session_password")
         password_input.send_keys(PASSWORD)
         login_button = self.driver.find_element(By.CSS_SELECTOR, value=".login__form_action_container button")
         login_button.click()
+        print("Wait I am Liking posts of your feed......")
 
     def like_post(self):
         posts = self.driver.find_elements(By.CLASS_NAME, value="relative")
@@ -37,9 +41,9 @@ class PostLiker:
                     like_buttons.click()
                     time.sleep(2)
                     j += 1
-            except NoSuchElementException:
+            except Exception:
                 continue
-        print("Total Likes = ", j)
+        print("Total Liked Post = ", j)
 
 
 bot = PostLiker()
