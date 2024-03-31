@@ -3,8 +3,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
-EMAIL = "nikhiltelase@gmail.com"
-PASSWORD = "Pintu123@"
+EMAIL = "Eamil"
+PASSWORD = "Your password"
 LINK = "https://www.linkedin.com/feed/"
 
 
