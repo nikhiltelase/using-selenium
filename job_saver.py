@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 import time
 
-email = "nikhiltelase@gmail.com"
-password = "Pintu123@"
+email = "email"
+password = "password"
 job_title = "https://www.linkedin.com/jobs/search/?currentJobId=3834313140&f_AL=true&geoId=101165590&keywords=intern&location=United%20Kingdom&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true"
 
 # keep Chrome browser open after program finishes
